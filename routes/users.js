@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-var debug = require("debug")("smartcityapp:server");
+var debug = require("debug")("movieapp:server");
 
 var users = {
   users: [
