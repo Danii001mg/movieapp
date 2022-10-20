@@ -17,6 +17,12 @@ var moviesRouter = require('./routes/movies');
 var bookmarksRouter = require('./routes/bookmarks');
 
 var app = express();
+var bodyParser = require("body-parser");
+var cors = require('cors');
+app.use(cors());
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
